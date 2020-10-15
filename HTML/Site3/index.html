@@ -17,26 +17,35 @@
                 background:blue;
                 overflow:hidden;
                 text-align: center;
+                top: 0;
+                position: sticky;
             }
-            .round {
-                border: 3px solid white;
-                border-radius: 50%;
-                margin-top: 30px;
+            #header a:hover {
+                background: lightblue;
             }
             ul {
                 text-align: left;
                 list-style-type: none;
+                position: fixed;
+                top: -20px;
+                width: 100%;
             }
             li {
                 background: lightskyblue;
                 float:left;
-                margin-left: 40px;
                 font-size: 20px;
-                padding-left: 5px;
-                padding-right: 5px;
+                border-right: 2px solid darkgray;
+            }
+            li:last-child {
+                border-right: none;
+            }
+            a.active {
+                background: lightblue;
             }
             a {
                 text-decoration: none;
+                display: block;
+                padding: 10px 20px;
             }
             #main {
                 background:darkblue;
@@ -53,13 +62,26 @@
             .two {
                 background:lightgray
             }
+            .circle {                
+                background:gold; 
+                height:150px; 
+                width:150px; 
+                border-radius:50%;
+                margin: 0 auto;
+                margin-top: 40px;
+            }
+            #header ul {
+                background: lightblue;
+            }
         </style>
     </head>
     <body>
         <div id="header">
-            <img class="round" height="120px" src="Graphics/eddie_head.png" alt="headshot">
+            <div class="circle">
+                <img id="headshot" height="150px" src="Graphics/eddie_head.png" alt="headshot">
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
